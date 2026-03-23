@@ -1,0 +1,91 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+    transition: background 1s, color 1s;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+header {
+    background: #004a99;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+body.dark-mode header {
+    background: #1f1f1f;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.section {
+    padding: 20px 50px;
+    max-width: 800px;
+    margin: auto;
+}
+
+button {
+    background: #ffcc00;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #e6b800;
+}
+
+#box1 {
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+    color: #666;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+.page-transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #004a99; 
+    z-index: 9999;
+    pointer-events: none;
+    border-radius: 50%;
+    transform: scale(0) rotate(0deg);
+    transition: transform 0.8s ease-in-out, border-radius 0.6s;
+}
+
+.page-transition-overlay.active {
+    transform: scale(1.5) rotate(360deg);
+    border-radius: 0%;
+}
+
